@@ -6,7 +6,9 @@ const NotFoundError = require('../errors/not-found-error');
 
 // Возвращает все сохраненные текущим пользователем фильмы.
 module.exports.getMovies = (req, res, next) => {
-  Movie.find({})
+  const userId = req.user._id;
+
+  Movie.find({ owner: userId })
     .then((movies) => res.send({ data: movies }))
     .catch(next);
 };

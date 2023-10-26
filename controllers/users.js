@@ -1,5 +1,6 @@
 const User = require('../models/user');
 const BadRequestError = require('../errors/bad-request-error');
+const ConflictError = require('../errors/conflict-error');
 const NotFoundError = require('../errors/not-found-error');
 
 // Возвращает информацию о пользователе.
@@ -31,6 +32,8 @@ module.exports.updateUser = (req, res, next) => {
     .catch((err) => {
       if (err.name === 'ValidationError') {
         next(new BadRequestError('В метод обновления пользователя переданы некорректные данные.'));
+      } else if (err.code === 11000) {
+        next(new ConflictError('Пользователь с такой почтой уже существует.'));
       } else {
         next(err);
       }

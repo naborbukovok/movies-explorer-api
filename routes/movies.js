@@ -27,7 +27,7 @@ router.post('/', celebrate({
 // Удаляет сохраненный фильм по id.
 router.delete('/:movieId', celebrate({
   params: Joi.object().keys({
-    movieId: Joi.string().custom(validateID),
+    movieId: Joi.string().required().custom(validateID),
   }),
 }), removeMovie);
 
