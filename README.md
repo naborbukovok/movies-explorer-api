@@ -1,6 +1,6 @@
 ## Movies Explorer: дипломная работа в Яндекс Практикуме
 
-> :globe_with_meridians: [**Ссылка на Movies Explorer API - https://api.movies.naborbukovok.nomoredomainsrocks.ru**](https://api.movies.naborbukovok.nomoredomainsrocks.ru) // IP 158.160.72.161
+> :globe_with_meridians: [**Ссылка на Movies Explorer API - https://api.movies.naborbukovok.nomoredomainsrocks.ru**](https://api.movies.naborbukovok.nomoredomainsrocks.ru) // IP 158.160.86.202
 
 ### :mortar_board: О чем проект
 **Этот проект** - бэкенд для дипломной работы по курсу ["Веб-разработчик"](https://practicum.yandex.ru/web/) от сервиса Яндекс Практикум. Пользователи могут управлять данными своего профиля, сохранять карточки понравившихся фильмов. Реализованы следующие роуты:
