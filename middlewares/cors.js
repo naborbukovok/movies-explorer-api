@@ -1,6 +1,8 @@
 const allowedCors = [
   'http://localhost:3000',
   'https://localhost:3000',
+  'http://movies.naborbukovok.nomoredomainsrocks.ru/',
+  'https://movies.naborbukovok.nomoredomainsrocks.ru/',
 ];
 
 module.exports = (req, res, next) => {

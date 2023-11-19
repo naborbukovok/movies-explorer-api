@@ -8,7 +8,11 @@ router.use('/', require('./auth'));
 router.use(auth);
 
 router.post('/signout', (req, res) => {
-  res.clearCookie('jwt').send({ message: 'Выход.' });
+  res.clearCookie('jwt', {
+    httpOnly: true,
+    sameSite: 'None',
+    secure: true,
+  }).send({ message: 'Выход.' });
 });
 
 router.use('/users', require('./users'));
